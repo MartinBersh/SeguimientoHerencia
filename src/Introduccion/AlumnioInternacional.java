@@ -5,6 +5,18 @@ public class AlumnioInternacional extends Alumno{
     private String pais;
     private double notaIdiomas;
 
+    public AlumnioInternacional(){
+        System.out.println("constructor alumno int");
+    }
+    public AlumnioInternacional(String nombre , String apellido){
+        super(nombre, apellido);
+
+    }
+    public AlumnioInternacional(String nombre , String apellido, String pais){
+        this(nombre, apellido);
+        this.pais = pais;
+    }
+
     public String getPais() {
         return pais;
     }
@@ -19,5 +31,16 @@ public class AlumnioInternacional extends Alumno{
 
     public void setNotaIdiomas(double notaIdiomas) {
         this.notaIdiomas = notaIdiomas;
+    }
+
+    @Override
+    public String saludar() {
+        return super.saludar() + " soy extranjero y soy de " + getPais();
+    }
+
+    @Override
+    public double calucularPromedio() {
+        System.out.println("calcularPromedio " + this.getClass().getCanonicalName());
+        return ((super.calucularPromedio()*3)+notaIdiomas)/4 ;
     }
 }

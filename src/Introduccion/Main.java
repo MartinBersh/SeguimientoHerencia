@@ -2,6 +2,7 @@ package Introduccion;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("=== creando istancia de alumno ===");
         Alumno alumno = new Alumno();
         alumno.setNombre("martin");
         alumno.setApellido("villegas");
@@ -10,6 +11,8 @@ public class Main {
         alumno.setNotaQuim(4.2);
         alumno.setNoteEspanol(2.2);
 
+
+        System.out.println("=== creando istancia de alumnoInt ===");
         AlumnioInternacional alumnoInt = new AlumnioInternacional();
         alumnoInt.setNombre("mario");
         alumnoInt.setApellido("ruiz");
@@ -21,13 +24,14 @@ public class Main {
         alumnoInt.setNotaIdiomas(6.1);
 
 
+
+        System.out.println("=== creando istancia de profesor ===");
         Profesor profesor = new Profesor();
         profesor.setNombre("Fabian");
         profesor.setApellido("bersh");
         profesor.setAsignatura("mate");
 
         System.out.println(alumnoInt.getNombre() + " " + alumnoInt.getApellido() + " " + alumnoInt.getNombreColegio() + " " + alumnoInt.getPais());
-
         System.out.println(alumno.getNombre() + "  " + alumno.getApellido());
         System.out.println(profesor.getAsignatura() + " " + profesor.getNombre() + "  " + profesor.getApellido());
 
