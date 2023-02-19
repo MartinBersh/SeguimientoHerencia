@@ -40,7 +40,13 @@ public class AlumnioInternacional extends Alumno{
 
     @Override
     public double calucularPromedio() {
-        System.out.println("calcularPromedio " + this.getClass().getCanonicalName());
+        System.out.println("calcularPromedio " + AlumnioInternacional.class.getCanonicalName());
         return ((super.calucularPromedio()*3)+notaIdiomas)/4 ;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n pais='" + pais + '\'' +
+                ", notaIdiomas=" + notaIdiomas;
     }
 }
